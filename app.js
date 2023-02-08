@@ -23,7 +23,7 @@ app.use(
 );
 
 app.use(express.json())
-app.use(cors({credentials: true, origin: 'https://hr-tyokalu.onrender.com', 'methods': 'GET,PUT,PATCH,POST,DELETE', 'Access-Control-Allow-Headers':'Authorization'})) // Pitä olla security syyistä...frontendin tule error jos ei ole tämä
+app.use(cors({credentials: true, origin: '*', 'methods': 'GET,PUT,PATCH,POST,DELETE', 'Access-Control-Allow-Headers':'Authorization'})) // Pitä olla security syyistä...frontendin tule error jos ei ole tämä
 app.use(helmet())
 app.use(xss());
 
